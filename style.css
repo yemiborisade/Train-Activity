@@ -1,0 +1,29 @@
+body {
+    background-image: url(https://i.etsystatic.com/16851582/r/il/985bd8/1602076945/il_570xN.1602076945_atjj.jpg);
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 4rem;
+}
+
+h4 {
+    font-family: 'Lobster', cursive;
+}
+
+.card-header {
+    color: yellow;
+    background-color: black;
+    opacity: 0.88;
+}
+
+#run-search {
+    background-color: blue;
+    color: yellow;
+    border-color: red;
+    border-width: 4px;
+}
+
+.card-body, td, th, label {
+    color: orangered;
+}

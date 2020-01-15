@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <title>All Aboard!</title>
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+            <div class="jumbotron" style="background-color: rgb(8, 8, 8) ; color: rgb(137, 243, 38); opacity: 0.88;">
+                <h1 class="text-center">
+                    <strong>
+                        <i></i> The Sooooouuuullll Train</strong>
+                </h1>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <br>
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>
+                                <h4> Add Train</h4>
+                            </strong>
+                        </div>
+                        <div class="card-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label >Train name:</label>
+                                    <input type="text" class="form-control" id="train-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="train-des">Destination:</label>
+                                    <input type="text" class="form-control" id="train-des">
+                                </div>
+                                <div class="form-group">
+                                    <label for="train-first">First Train Time (HH:mm - Military Time):</label>
+                                    <input type="text" class="form-control" id="train-first">
+                                </div>
+                                <div class="form-group">
+                                    <label for="train-min">Frequency (min):</label>
+                                    <input type="number" class="form-control" id="train-min">
+                                </div>
+
+                                <button type="submit" class="btn btn-default" id="run-search">
+                                    <i class="train-search"></i> Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <br>
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>
+                                <h4>Recent Search</h4>
+                            </strong>
+                        </div>
+                        <div class="card-body">
+                            <table class="table">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Train Name</th>
+                                        <th scope="col">Destination</th>
+                                        <th scope="col">Frequency (min)</th>
+                                        <th scope="col">Next Arrival</th>
+                                        <th scope="col">Minutes Away</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="train-recent">
+                                    <tr>
+                                        <td id="name-display"></td>
+                                        <td id="des-display"></td>
+                                        <td id="freq-display"></td>
+                                        <td id="next-display"></td>
+                                        <td id="min-display"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <br>
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>
+                                <h4>Previous Searches</h4>
+                            </strong>
+                        </div>
+                        <div class="card-body">
+                            <table class="table">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Train Name</th>
+                                        <th scope="col">Destination</th>
+                                        <th scope="col">Frequency (min)</th>
+                                        <th scope="col">Next Arrival</th>
+                                        <th scope="col">Minutes Away</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="prev-train-section">
+                                    <tr>
+                                        <td id="prev-name-display"></td>
+                                        <td id="prev-des-display"></td>
+                                        <td id="prev-freq-display"></td>
+                                        <td id="prev-next-display"></td>
+                                        <td id="prev-min-display"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+            </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+            </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+            </script>
+        <script src="choochoo.js"></script>
+    </body>
+
+</html>
